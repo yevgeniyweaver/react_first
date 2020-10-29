@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css';
-import './main.css';
-//import './main';
-import Header from './Header.js';
-import Content from './Content.js';
-import Vakansii from './Vakansii.js';
+import './profi/css/main.css';
+import './profi/css/style.css';
+import Sidebar from './profi/Sidebar';
+// import Content from './Content.js';
+// import Vakansii from './Vakansii.js';
 
 // function App() {
 //   return (
@@ -23,26 +23,15 @@ import Vakansii from './Vakansii.js';
 //     // {/*</div>*/}
 //   );
 // }
-let fa =11;
-if(1<2){
-    var fa_2 =22;
-}
-function crHtml(name){
-    return `<p> ${ name }</p>`;
-}
-console.log(fa);
-console.log(fa_2);
-console.log(crHtml('ES2015'));
 
-class App extends Component{
+class Profi extends Component{
     render(){
         return(
             <div>
-              <Header />
-              <Content />
+                <Sidebar />
             </div>
         )
     }
 }
 
-export default App;
+export default Profi;
