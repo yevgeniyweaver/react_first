@@ -1,9 +1,32 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import './css/sidebar.css';
+import menu_mob from './img/icons/menu_mob.svg';
 
 
 
-class Sidebar extends Component{
+class Sidebar extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            openedMenu:null,
+            menuOpen: false, highlight: false, isActive: false,
+        };
+        this.showMenu = this.showMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
+    };
+    showMenu = openedMenu => e => {
+
+    };
+    closeMenu = openedDropdown => e => {
+        e.preventDefault();
+        console.log('close'+openedDropdown );
+        document.removeEventListener('click', this.closeMenu());
+        this.setState({  }, () => {
+
+        });
+    };
+
     render(){
         return(
             <div>
@@ -12,7 +35,7 @@ class Sidebar extends Component{
                         <div className="sidebar-box">
                             <div className="p-header">
                                 <div className="p-header-mob">
-                                    <img className="p-header-mob-icon" src="./img/icons/menu_mob.svg"/>
+                                    <img className="p-header-mob-icon" src={menu_mob} />
                                 </div>
                                 <div className="p-header-left">
                                     <img className="p-header-logo" src="./img/icons/logo.svg"/>
