@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './css/sidebar.css';
 import menu_mob from './img/icons/menu_mob.svg';
+import logo from './img/icons/logo.svg';
+import exit from './img/icons/exit.svg';
+import Image from './../Image';
 
 
 
@@ -38,11 +41,13 @@ class Sidebar extends React.Component{
                                     <img className="p-header-mob-icon" src={menu_mob} />
                                 </div>
                                 <div className="p-header-left">
-                                    <img className="p-header-logo" src="./img/icons/logo.svg"/>
+                                    <Image src={logo} className="p-header-logo"/>
+                                    {/*<img className="p-header-logo" src="./img/icons/logo.svg"/>*/}
                                 </div>
                                 <div className="p-header-mid"></div>
                                 <div className="p-header-right">
-                                    <img className="p-header-icon" src="./img/icons/exit.svg"/>
+                                    <Image src={exit} className="p-header-icon"/>
+                                    {/*<img className="p-header-icon" src="./img/icons/exit.svg"/>*/}
                                 </div>
                             </div>
 
